@@ -3,55 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <title>تست سرعت تایپ - تست عملی</title>
-    <link rel="stylesheet" href="./assets/styles/main.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      /* استایل‌های اختصاصی برای مودال که قبلاً دادم */
-      .result-modal-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: none; /* در حالت عادی مخفی */
-        justify-content: center;
-        align-items: center;
-        z-index: 1050;
-      }
-      .result-modal-content {
-        background: white;
-        padding: 2rem;
-        border-radius: 15px;
-        text-align: center;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        min-width: 300px;
-      }
-      .show-modal {
-        display: flex;
-      }
-    </style>
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <link rel="stylesheet" href="assets/styles/bootstrap.rtl.css" />
+    <script src="assets/script/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="assets/styles/all.css" />
   </head>
   <body class="bg-light p-5">
-    <div class="container text-center">
-      <h3>متشکرم از همه حمایت هاتون🙏</h3>
-      <hr
-        style="
-          font-size: 2rem !important;
-          font-weight: bold;
-          border: 2px solid #666;
-        "
-      />
-
+    <div class="container-fluid text-center my-5">
       <h1>لینک دونیت سازنده :</h1>
       <a href="https://www.coffeebede.com/amirstreaver"
         ><img
           class="img-fluid"
+          alt="عکس لینک دونیت"
           src="https://coffeebede.ir/DashboardTemplateV2/app-assets/images/banner/default-yellow.svg"
       /></a>
     </div>
+    <button
+      style="
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        padding: 10px 20px;
+        border: 2px solid #007bff;
+        border-radius: 12px;
+        color: #007bff;
+        font-weight: bold;
+      "
+    >
+      <a href="index.html" style="text-decoration: none; color: #007bff">
+        برگشت به صفحه اصلی
+      </a>
+    </button>
   </body>
 </html>
