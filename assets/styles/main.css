@@ -1,0 +1,409 @@
+@font-face {
+  font-family: Vazir;
+  src: url("/assets/fonts/Vazir.eot");
+  src: url("/assets/fonts/Vazir.ttf");
+  src: url("/assets/fonts/Vazir.woff");
+  /* src: url("/assets/fonts/Vazir.woff2"); */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Vazir";
+  /* transition-timing-function: cubic-bezier(0.2, 0.1, 0.93, 0.15); */
+  transition-duration: 0.3s;
+  /* transition-delay: 0.191429s; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #007bff; /* آبی استاندارد */
+  --secondary-color: #17a2b8; /* فیروزه‌ای */
+  --accent-color: #28a745; /* سبز روشن */
+  --background-color: #f8f9fa; /* سفید مایل به خاکستری روشن */
+  --card-background: #ffffff; /* سفید */
+  --text-color: #212529; /* خاکستری خیلی تیره */
+  --heading-color: #343a40; /* خاکستری تیره‌تر */
+  --hover-color: #0056b3; /* آبی تیره‌تر برای هاور */
+}
+
+body {
+  overflow-x: hidden;
+  /* background-image: url(/assets/background_img.jpg); */
+  background-color: #d4e3fc;
+  color: var(--text-color);
+  font-family: "Vazir", sans-serif;
+  margin: 0;
+}
+/* _____________________________ */
+/* scroll */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #549ba7;
+  color: #17a3b8a9;
+}
+
+/* ____________________________________ */
+.header {
+  background-color: #fff;
+  padding: 15px;
+  color: #343a40;
+  border-bottom: 2.5px solid #343a40;
+}
+
+/* text decoration تمامی هارو از بین بردیم*/
+a {
+  text-decoration: none !important;
+}
+
+.header a {
+  color: inherit;
+}
+
+.headerBtns button {
+  padding: 1rem;
+  border-radius: 50%;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0;
+}
+
+.headerBtns button:hover {
+  background-color: var(--hover-color);
+}
+.headerBtns button:hover a {
+  color: var(--text-color);
+}
+
+/* .headerBtns button:first-child {
+  border-radius: 50% !important;
+} */
+
+/* /////////////////////////////////////////////////////////// */
+/* TITLE SECTION ----- main */
+
+.titleSection > * {
+  margin: 10px 0;
+}
+/*  */
+.keyboardFa {
+  padding: 8px 10px;
+  border-radius: 15px;
+  color: var(--secondary-color);
+  background-color: #17a3b84d;
+}
+
+h1 {
+  font-weight: bold !important;
+}
+
+/* ************************************************* */
+/* ************************************************* */
+
+/* TEST Section */
+
+.testContainer {
+  box-shadow: 3px 3px 0;
+  border: 3px solid black;
+  border-radius: 15px;
+}
+
+.recordShow {
+  color: var(--primary-color);
+}
+
+#recordLabel {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+.statusContainer .statusBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 25%;
+  text-align: center;
+  margin: 0px 1rem;
+  padding: 20px 0;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+}
+
+.statValue {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.boxDescription {
+  margin: 15px 0 0 2px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  align-items: flex-end;
+}
+
+.progressContainer {
+  margin: 1rem 0 1rem 0;
+}
+.progressBar {
+  border-radius: 8px;
+  border: 2px solid black;
+}
+.progressBarFill {
+  width: 0%;
+  padding: 7px;
+  /* background-color: var(--accent-color) !important; */
+}
+
+.textDisplayWrapper {
+  color: #666;
+  outline: 0;
+  border-radius: 12px;
+  padding: 10px;
+  line-height: 3rem;
+  margin: 1rem 0 1rem 0;
+  box-shadow: 3px 3px 0 black !important;
+  opacity: 0.07;
+  border: 3px solid black;
+  font-size: 1.3rem;
+  font-weight: bold;
+  overflow-y: visible;
+}
+
+.textInputContainer input {
+  width: 100% !important;
+  box-shadow: 3px 3px 0 #666;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 12px;
+  border: 3px solid #666;
+  outline: 0;
+}
+.disableByHand {
+  /* جلوگیری از انتخاب متن توسط ماوس */
+  user-select: none;
+  -webkit-user-select: none; /* برای Safari */
+  -moz-user-select: none; /* برای Firefox */
+  -ms-user-select: none; /* برای Internet Explorer/Edge */
+
+  /* اختیاری: جلوگیری از درگ کردن (Drag) متن */
+  cursor: default;
+}
+
+input[type="text"]:-moz-placeholder {
+  text-align: right;
+}
+input[type="text"]:-ms-input-placeholder {
+  text-align: right;
+}
+input[type="text"]::-webkit-input-placeholder {
+  text-align: right;
+}
+
+/* Correct And Wrong */
+.correct {
+  color: lime;
+}
+
+.wrong {
+  color: red;
+}
+
+/* _____________________________________ */
+/* Results component container */
+/* استایل‌های سفارشی برای مودال نتایج */
+
+/* Overlay */
+.custom-result-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* پس‌زمینه کمی تیره */
+  display: none; /* در ابتدا مخفی */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px); /* افکت بلور */
+}
+
+/* محتوای مودال (کارت شناور) */
+.custom-result-modal-content {
+  background-color: #fff;
+  border-radius: 15px; /* گوشه‌های گرد */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* سایه ملایم */
+  width: 90%;
+  max-width: 500px; /* حداکثر عرض */
+  overflow: hidden; /* جلوگیری از بیرون زدن محتوا */
+  font-family: "Arial", sans-serif; /* یا هر فونت دیگری که دوست داری */
+  direction: rtl; /* برای راست به چپ */
+}
+
+.modal-header {
+  padding: 20px 20px 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #333;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #aaa;
+  cursor: pointer;
+  padding: 0 10px;
+}
+.close-button:hover {
+  color: #777;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* دو ستون */
+  gap: 15px; /* فاصله بین کارت‌ها */
+}
+
+.stat-card {
+  background-color: #f9f9f9; /* پس‌زمینه روشن برای کارت‌ها */
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); /* سایه داخلی کم */
+}
+
+.stat-label {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* رنگ مقادیر خاص */
+#modalAccuracy.stat-value {
+  color: #007bff;
+} /* آبی برای دقت */
+#modalWpm.stat-value {
+  color: #28a745;
+} /* سبز برای WPM */
+#modalCharacters.stat-value {
+  color: #6f42c1;
+} /* بنفش برای کاراکتر */
+
+.modal-footer {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-top: 1px solid #eee;
+  background-color: #fdfdfd;
+}
+
+/* دکمه‌های سفارشی */
+.btn-primary {
+  background-color: #007bff; /* آبی اصلی */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #f8f9fa; /* خاکستری روشن */
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.btn-secondary:hover {
+  background-color: #e2e6ea;
+}
+
+/* نمایش دکمه بستن */
+#closeModalBtnBottom {
+  display: block;
+} /* نمایش دکمه بستن در فوتر */
+
+/* اگر خواستی کلید X رو نشون ندی، این رو فعال کن */
+/* .modal-header .close-button { display: none; } */
+
+/* ________________________________________________________ */
+/* FOOTER */
+
+#footer {
+  padding: 2rem;
+  border-top: 2px solid #343a40;
+}
+#footer #footer .container div {
+  gap: 1.5rem;
+}
+#footer span {
+  width: 280px;
+  font-size: 2rem;
+  border-bottom: 1px solid #666;
+  margin-right: 0 10px 0 0;
+}
+#footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 !important;
+}
+#footer ul li {
+  margin: 1rem 0 1rem 0;
+}
+#footer ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.author {
+  padding: 1rem;
+  border-top: 2px solid #666;
+
+  color: #000;
+}

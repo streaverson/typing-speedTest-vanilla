@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width
+  , initial-scale=1.0"
+    />
+    <title>تست سرعت تایپ</title>
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <link rel="stylesheet" href="assets/styles/bootstrap.rtl.css" />
+    <script src="assets/script/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="assets/styles/all.css" />
+  </head>
+  <body>
+    <header
+      class="container-fluid header mb-5 d-flex justify-content-around align-items-center"
+    >
+      <h2 class="me-3">
+        <a href="#">
+          <img src="assets/logo.png" alt="logo" style="height: 65px" />
+        </a>
+      </h2>
+      <div class="headerBtns">
+        <button class="coffeeBtn">
+          <a href="/Donate.html">
+            <i class="fa-regular fa-coffee fa-xl"></i>
+          </a>
+        </button>
+        <button class="contactMeBtn">
+          <a href="#footer">
+            <i class="fa-regular fa-envelope fa-xl"></i>
+          </a>
+        </button>
+      </div>
+    </header>
+    <!-- notification -->
+    <span
+      class="notification"
+      style="
+        position: absolute;
+        top: 28%;
+        left: -200px;
+        display: none;
+        width: 200px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 12px;
+      "
+    >
+      <span> <i class="fas fa-exclamation-circle lg"></i></span>
+      کپی ممنوع است
+    </span>
+
+    <section
+      class="container-fluid titleSection d-flex flex-column justify-content-center align-items-center"
+    >
+      <span class="keyboardFa">
+        <i class="fa-regular fa-keyboard fa-xl"></i>
+      </span>
+      <div class="mb-0">
+        <h1>تست تایپ انگلیسی</h1>
+      </div>
+      <div>
+        <p class="text-muted fs-6">سرعت و دقت خود را بیازمایید</p>
+      </div>
+    </section>
+    <main class="container-fluid">
+      <section class="container testContainer d-flex flex-column">
+        <!-- <div class="timerMode"></div> -->
+        <div class="statusContainer p-3 d-flex flex-row justify-content-center">
+          <div class="statusBox" id="wpmStatBox">
+            <div id="recordLabel">رکورد</div>
+            <div class="statValue" id="wpmStat">_</div>
+            <div class="text-muted boxDescription">کلمه/دقیقه</div>
+          </div>
+          <div class="statusBox">
+            <div id="recordLabel">رکورد</div>
+            <div class="statValue" id="accuracyValue">_</div>
+            <div class="text-muted boxDescription">دقت</div>
+          </div>
+          <div class="statusBox">
+            <div id="recordLabel" style="visibility: hidden">رکورد</div>
+
+            <div class="statValue" id="timeStat">۶۰</div>
+            <div class="text-muted boxDescription">ثانیه</div>
+          </div>
+          <div class="statusBox">
+            <div id="recordLabel" style="visibility: hidden">رکورد</div>
+            <div class="statValue" id="charsStat">_</div>
+            <div class="text-muted boxDescription">تعداد کاراکتر</div>
+          </div>
+        </div>
+        <div class="progressContainer">
+          <div class="progressBar">
+            <div class="progressBarFill"></div>
+          </div>
+        </div>
+
+        <div class="textDisplayWrapper disableByHand" dir="ltr"></div>
+        <div class="textInputContainer my-2">
+          <input
+            id="textInput"
+            dir="ltr"
+            type="text"
+            placeholder="اینجا تایپ کنید..."
+          />
+        </div>
+      </section>
+    </main>
+    <!-- Question Good/Bad -->
+
+    <!-- مدال نتیحه -->
+    <div id="resultModal" class="custom-result-modal-overlay">
+      <div class="custom-result-modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">نتیجه آزمون</h3>
+          <button id="closeModalBtn" class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-label">دقت</div>
+              <div id="modalAccuracy" class="stat-value">0%</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">WPM</div>
+              <div id="modalWpm" class="stat-value">0</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">زمان</div>
+              <div class="stat-value">۶۰ ثانیه</div>
+              <!-- این عدد معمولاً ثابت هست -->
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">کاراکتر</div>
+              <div id="modalCharacters" class="stat-value">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="closeModalBtnBottom" class="btn-secondary">بستن</button>
+          <button id="retryButton" class="btn-primary">تلاش مجدد</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer - contact me -->
+
+    <footer class="conatiner-fluid my-5" id="footer">
+      <div class="container">
+        <div class="d-flex flex-column">
+          <span>ارتباط با من</span>
+          <ul>
+            <li>
+              <a
+                href="mailto:amirmahdi.valadkhani@gmail.com
+"
+                >amirmahdi.valadkhani@gmail.com
+              </a>
+            </li>
+            <li><a href="tel:+989101799202">09101799202</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="author">
+      <strong>
+        تمام حقوق مادي و معنوي اين سایت متعلق به امیر ولدخانی می باشد و هر گونه
+        کپی برداری پیگرد قانونی دارد.
+      </strong>
+    </div>
+  </body>
+  <script src="assets/script/app.js"></script>
+</html>
+<!-- 
+#go_up{
+    position: fixed;
+    bottom: .2rem;
+    right: .2rem;
+    background-color: ;
+}
+
+header{
+    background: url('../img/Group-811.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    min-height: 100%;
+    background-position: center;
+    
+}
+
+.header_scroll{
+    background-color:  !important;
+    transition: all .3s;
+} -->
